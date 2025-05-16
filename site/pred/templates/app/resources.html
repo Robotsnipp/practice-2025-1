@@ -1,0 +1,137 @@
+<!-- templates/app/resources.html -->
+{% extends "app/base.html" %}
+{% block title %}Полезные ресурсы{% endblock %}
+
+{% block content %}
+<!-- Resources Page -->
+<div id="resources-page" class="page-transition hidden-page">
+    <section class="mb-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Полезные ресурсы</h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Здесь собраны материалы, которые помогут лучше понять наш проект, технологии, которые мы используем, и организации, с которыми мы сотрудничаем.</p>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Partner -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-40 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+                    <i class="fas fa-handshake text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Организация-партнер</h3>
+                    <p class="text-gray-600 mb-4">Московский политех является нашим ключевым партнером и заказчиком проекта.</p>
+                    <a href="https://mospolytech.ru/" target="_blank" class="inline-flex items-center text-blue-500 font-medium hover:text-blue-700 transition duration-300">
+                        Посетить сайт
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Technology 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-40 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center">
+                    <i class="fab fa-python text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Машинное обучение на Python</h3>
+                    <p class="text-gray-600 mb-4">Официальная документация по библиотекам для машинного обучения, которые мы используем в проекте.</p>
+                    <a href="https://scikit-learn.org/" target="_blank" class="inline-flex items-center text-blue-500 font-medium hover:text-blue-700 transition duration-300">
+                        Перейти к ресурсу
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-40 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center">
+                    <i class="fas fa-book-open text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Современные тренды в анализе данных</h3>
+                    <p class="text-gray-600 mb-4">Актуальная статья о современных подходах к анализу больших данных и автоматизации бизнес-процессов.</p>
+                    <a href="https://www.geeksforgeeks.org/top-data-analytics-trends/" target="_blank" class="inline-flex items-center text-blue-500 font-medium hover:text-blue-700 transition duration-300">
+                        Читать статью
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Technology 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-40 bg-gradient-to-r from-yellow-400 to-yellow-600 flex items-center justify-center">
+                    <i class="fab fa-js text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Frontend-разработка</h3>
+                    <p class="text-gray-600 mb-4">Ресурсы по современным фреймворкам JavaScript, которые используются в нашем проекте.</p>
+                    <a href="https://reactjs.org/" target="_blank" class="inline-flex items-center text-blue-500 font-medium hover:text-blue-700 transition duration-300">
+                        Документация React
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-40 bg-gradient-to-r from-red-400 to-red-600 flex items-center justify-center">
+                    <i class="fab fa-python text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Backend-разработка</h3>
+                    <p class="text-gray-600 mb-4">Подборка успешных кейсов внедрения автоматизации в различных отраслях бизнеса.</p>
+                    <a href="https://flask.palletsprojects.com/en/stable/" target="_blank" class="inline-flex items-center text-blue-500 font-medium hover:text-blue-700 transition duration-300">
+                        Документация Flask
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Technology 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-40 bg-gradient-to-r from-indigo-400 to-indigo-600 flex items-center justify-center">
+                    <i class="fas fa-database text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Базы данных</h3>
+                    <p class="text-gray-600 mb-4">Ресурсы по работе с PostgreSQL базами данных, которые используются в нашем проекте для хранения информации.</p>
+                    <a href="https://www.postgresql.org/" target="_blank" class="inline-flex items-center text-blue-500 font-medium hover:text-blue-700 transition duration-300">
+                        PostgreSQL документация
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Дополнительные материалы</h2>
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-4 text-blue-600">Рекомендуемая литература</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fas fa-book text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-medium">"Искусственный интеллект в бизнесе" - Джон Доу</p>
+                            <p class="text-sm text-gray-600">Основные принципы применения ИИ для решения бизнес-задач</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-book text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-medium">"Анализ больших данных" - Смит А.</p>
+                            <p class="text-sm text-gray-600">Методы обработки и анализа больших объемов информации</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-book text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-medium">"Автоматизация процессов" - Ли К.</p>
+                            <p class="text-sm text-gray-600">Практическое руководство по автоматизации бизнес-процессов</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

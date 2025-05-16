@@ -1,0 +1,121 @@
+<!-- templates/app/base.html -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проектная деятельность | Наш проект</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-project-diagram text-blue-500 text-3xl"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Система отчетности</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="{% url 'home' %}" class="nav-link py-2 px-1 font-medium text-gray-700 hover:text-blue-500 transition duration-300" data-page="home">Главная</a>
+                    <a href="{% url 'about' %}" class="nav-link py-2 px-1 font-medium text-gray-700 hover:text-blue-500 transition duration-300" data-page="about">О проекте</a>
+                    <a href="{% url 'team' %}" class="nav-link py-2 px-1 font-medium text-gray-700 hover:text-blue-500 transition duration-300" data-page="team">Участники</a>
+                    <a href="{% url 'journal' %}" class="nav-link py-2 px-1 font-medium text-gray-700 hover:text-blue-500 transition duration-300" data-page="journal">Журнал</a>
+                    <a href="{% url 'resources' %}" class="nav-link py-2 px-1 font-medium text-gray-700 hover:text-blue-500 transition duration-300" data-page="resources">Ресурсы</a>
+                </nav>
+                <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white py-4 px-4 shadow-md" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="{% url 'home' %}" class="nav-link block py-2 font-medium text-gray-700 hover:text-blue-500 transition duration-300" data-page="home">Главная</a>
+                <a href="{% url 'about' %}" class="nav-link block py-2 font-medium text-gray-700 hover:text-blue-500 transition duration-300" data-page="about">О проекте</a>
+                <a href="{% url 'team' %}" class="nav-link block py-2 font-medium text-gray-700 hover:text-blue-500 transition duration-300" data-page="team">Участники</a>
+                <a href="{% url 'journal' %}" class="nav-link block py-2 font-medium text-gray-700 hover:text-blue-500 transition duration-300" data-page="journal">Журнал</a>
+                <a href="{% url 'resources' %}" class="nav-link block py-2 font-medium text-gray-700 hover:text-blue-500 transition duration-300" data-page="resources">Ресурсы</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Проектная деятельность</h3>
+                    <p class="text-gray-400">Разработка инновационного решения для автоматизации бизнес-процессов с использованием современных технологий.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Навигация</h3>
+                    <ul class="space-y-2">
+                        <li><a href="{% url 'home' %}" class="text-gray-400 hover:text-white transition duration-300 nav-link" data-page="home">Главная</a></li>
+                        <li><a href="{% url 'about' %}" class="text-gray-400 hover:text-white transition duration-300 nav-link" data-page="about">О проекте</a></li>
+                        <li><a href="{% url 'team' %}" class="text-gray-400 hover:text-white transition duration-300 nav-link" data-page="team">Участники</a></li>
+                        <li><a href="{% url 'journal' %}" class="text-gray-400 hover:text-white transition duration-300 nav-link" data-page="journal">Журнал</a></li>
+                        <li><a href="{% url 'resources' %}" class="text-gray-400 hover:text-white transition duration-300 nav-link" data-page="resources">Ресурсы</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Контакты</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>project@example.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span>+7 (123) 456-7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>г. Москва, ул. Примерная, 123</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Социальные сети</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-700 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <div class="mt-6">
+                        <p class="text-gray-400 text-sm">Подпишитесь на наши обновления:</p>
+                        <div class="flex mt-2">
+                            <input type="email" placeholder="Ваш email" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg focus:outline-none w-full">
+                            <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r-lg transition duration-300">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Проектная деятельность. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
