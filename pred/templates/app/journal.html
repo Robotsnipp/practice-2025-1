@@ -1,0 +1,87 @@
+<!-- templates/app/journal.html -->
+{% extends "app/base.html" %}
+{% block title %}Журнал работ{% endblock %}
+
+{% block content %}
+<!-- Journal Page -->
+<div id="journal-page" class="page-transition hidden-page">
+    <section class="mb-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Журнал проекта</h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Здесь мы публикуем новости о ходе работы над проектом, важные достижения и планы на будущее.</p>
+
+        <div class="space-y-8 max-w-4xl mx-auto">
+            <!-- News 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden news-card transition duration-300">
+                <div class="md:flex">
+                    <div class="md:w-1/3 h-48 bg-blue-500 flex items-center justify-center">
+                        <span class="text-white text-5xl font-bold">10</span>
+                        <span class="text-white text-xl ml-2">Марта</span>
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Старт проекта</h3>
+                        <p class="text-gray-600 mb-4">Состоялось первое собрание команды, на котором были распределены роли и обсуждены основные задачи проекта. Определены ключевые этапы работы и сроки их выполнения.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden news-card transition duration-300">
+                <div class="md:flex">
+                    <div class="md:w-1/3 h-48 bg-indigo-500 flex items-center justify-center">
+                        <span class="text-white text-5xl font-bold">28</span>
+                        <span class="text-white text-xl ml-2">апреля</span>
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Завершение первого этапа</h3>
+                        <p class="text-gray-600 mb-4">Успешно завершен этап анализа требований и проектирования архитектуры системы. Разработаны технические спецификации для основных модулей. Начата работа над прототипом системы.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden news-card transition duration-300">
+                <div class="md:flex">
+                    <div class="md:w-1/3 h-48 bg-purple-500 flex items-center justify-center">
+                        <span class="text-white text-5xl font-bold">13</span>
+                        <span class="text-white text-xl ml-2">Мая</span>
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Демонстрация прототипа</h3>
+                        <p class="text-gray-600 mb-4">Представлен рабочий прототип системы партнерам проекта. Получены первые отзывы и рекомендации по доработке. Команда приступила к реализации основных функций системы.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-blue-50 rounded-xl p-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Ближайшие планы</h2>
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="font-semibold text-lg mb-3 text-blue-600">Сентябрь</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Завершение разработки основных модулей</li>
+                    <li>Начало комплексного тестирования</li>
+                    <li>Подготовка документации</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="font-semibold text-lg mb-3 text-blue-600">Октябрь</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Исправление выявленных ошибок</li>
+                    <li>Оптимизация производительности</li>
+                    <li>Подготовка к пилотному внедрению</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="font-semibold text-lg mb-3 text-blue-600">Ноябрь</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Внедрение у партнеров</li>
+                    <li>Сбор обратной связи</li>
+                    <li>Финальная доработка проекта</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

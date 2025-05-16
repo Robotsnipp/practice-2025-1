@@ -1,0 +1,128 @@
+<!-- templates/app/team.html -->
+{% extends "app/base.html" %}
+{% block title %}Участники проекта{% endblock %}
+
+{% block content %}
+<!-- Team Page -->
+<div id="team-page" class="page-transition hidden-page">
+    <section class="mb-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Наша команда</h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">В проекте участвуют студенты разных специальностей, каждый из которых вносит свой уникальный вклад в общее дело. Ниже представлены основные участники и их роли в проекте.</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Member 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-white text-8xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Андреев Андрей</h3>
+                    <p class="text-blue-500 font-medium mb-4">Руководитель проекта</p>
+                    <p class="text-gray-600 mb-4">Координирует работу команды, отвечает за взаимодействие с партнерами и контроль сроков выполнения задач.</p>
+                    <!--
+                    <div class="flex space-x-3">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Лидерство</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Коммуникация</span>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-white text-8xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Григорий Герасимов</h3>
+                    <p class="text-blue-500 font-medium mb-4">Fullstack-Разработчик</p>
+                    <p class="text-gray-600 mb-4">Разработал REST API на Flask для обмена данными между клиентом и PostgreSQL-базой, используя SQLAlchemy для работы с моделями.</p>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-green-400 to-teal-500 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-white text-8xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Долбышев Всеволод</h3>
+                    <p class="text-blue-500 font-medium mb-4">Аналитик данных</p>
+                    <p class="text-gray-600 mb-4">Провёл анализ данных из PostgreSQL, подготовил выборки для ML-модели с использованием Pandas и обучил модель классификации пользователей на Scikit-learn.</p>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-white text-8xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Зиновьев Сергей</h3>
+                    <p class="text-blue-500 font-medium mb-4">Fullstack-разработчик</p>
+                    <p class="text-gray-600 mb-4">Настроил регистрацию и авторизацию пользователей через сессии в Flask, сохраняя данные в PostgreSQL.</p>
+                </div>
+            </div>
+
+            <!-- Member 5 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-red-400 to-pink-500 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-white text-8xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Коцевич Александр</h3>
+                    <p class="text-blue-500 font-medium mb-4">Fullstack-разработчик</p>
+                    <p class="text-gray-600 mb-4">Создал и реализовал через Flask CRUD-интерфейс для управления записями в таблице заказов, с миграциями через Alembic.</p>
+                </div>
+            </div>
+
+            <!-- Member 6 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-indigo-400 to-purple-500 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-white text-8xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Краснов Родион</h3>
+                    <p class="text-blue-500 font-medium mb-4">Fullstack-разработчик</p>
+                    <p class="text-gray-600 mb-4">Сделал пагинацию списка товаров на бэкенде с помощью Flask и SQL-запросов, а также отрисовал её на фронтенде с использованием шаблонизатора Jinja2</p>
+                </div>
+            </div>
+
+            <!-- Member 7 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-white text-8xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Мочалин Глеб</h3>
+                    <p class="text-blue-500 font-medium mb-4">Анализ данных</p>
+                    <p class="text-gray-600 mb-4">Настроил ETL-процесс выгрузки данных из Flask-приложения в PostgreSQL, выполнил предобработку и построил прогноз оттока на основе логистической регрессии.</p>
+                </div>
+            </div>
+
+            <!-- Member 8 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-white text-8xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Опарин Захар</h3>
+                    <p class="text-blue-500 font-medium mb-4">UI/UX-Дизайнер</p>
+                    <p class="text-gray-600 mb-4">Создал дизайн интерфейса веб-приложения в Figma, включая макеты главной страницы, профиля пользователя и формы регистрации.</p>
+                </div>
+            </div>
+
+            <!-- Member 9 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div class="h-48 bg-gradient-to-r from-green-400 to-teal-500 flex items-center justify-center">
+                    <i class="fas fa-user-circle text-white text-8xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Праздников Артем</h3>
+                    <p class="text-blue-500 font-medium mb-4">Team Lead разработчиков</p>
+                    <p class="text-gray-600 mb-4">Организовал работу команды разработчиков, распределил задачи по фронтенду и бэкенду, внедрил CI/CD через GitHub Actions и настроил архитектуру приложения на Flask.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
